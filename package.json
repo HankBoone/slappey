@@ -1,10 +1,10 @@
 {
-  "name": "slappey",
+  "name": "@nordbot/slappey",
   "version": "3.0.0",
   "description": "A simple Discord Bot Project Scaffolder",
   "main": "./lib/index.js",
   "bin": {
-    "slappey": "./lib/index.js"
+    "slappey": "lib/index.js"
   },
   "scripts": {
     "build": "tsc",
@@ -13,7 +13,10 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "repository": "git+https://github.com/stuyy/slappey.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stuyy/slappey.git"
+  },
   "keywords": [
     "discord",
     "discord.js",

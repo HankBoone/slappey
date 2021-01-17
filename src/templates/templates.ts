@@ -207,7 +207,11 @@ module.exports = class ReadyEvent extends BaseEvent {
     super('ready');
   }
   async run (client) {
-    console.log(client.user.tag + ' has logged in.');
+    try {
+      console.log(client.user.tag + ' has logged in.');
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`;
 }
@@ -235,16 +239,20 @@ module.exports = class MessageEvent extends BaseEvent {
   }
   
   async run(client, message) {
-    if (message.author.bot) return;
-    if (message.content.startsWith(client.prefix)) {
-      const [cmdName, ...cmdArgs] = message.content
-      .slice(client.prefix.length)
-      .trim()
-      .split(/\\s+/);
-      const command = client.commands.get(cmdName);
-      if (command) {
-        command.run(client, message, cmdArgs);
+    try {
+      if (message.author.bot) return;
+      if (message.content.startsWith(client.prefix)) {
+        const [cmdName, ...cmdArgs] = message.content
+        .slice(client.prefix.length)
+        .trim()
+        .split(/\\s+/);
+        const command = client.commands.get(cmdName);
+        if (command) {
+          command.run(client, message, cmdArgs);
+        }
       }
+    } catch (error) {
+      console.log(error);
     }
   }
 }`;
@@ -285,7 +293,11 @@ module.exports = class TestCommand extends BaseCommand {
   }
 
   async run(client, message, args) {
-    message.channel.send('Test command works');
+    try {
+      message.channel.send('Test command works');
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`;
 }
@@ -314,8 +326,12 @@ module.exports = class ${capitalize(name)}Command extends BaseCommand {
     super('${name}', '${category}', []);
   }
 
-  run(client, message, args) {
-    message.channel.send('${name} command works');
+  async run(client, message, args) {
+    try {
+      message.channel.send('${name} command works');
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`;
 }

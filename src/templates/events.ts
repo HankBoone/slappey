@@ -7,7 +7,12 @@ module.exports = class ChannelCreateEvent extends BaseEvent {
   }
   
   async run(client, channel) {
-    console.log(channel.name + ' was created.');
+    try {
+      console.log(channel.name + ' was created.');
+    } catch (error) {
+      console.log(error);
+    }
+    
   }
 }`,
   channelDelete: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-channelDelete
@@ -18,7 +23,11 @@ module.exports = class ChannelDeleteEvent extends BaseEvent {
   }
   
   async run(client, channel) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 `,
@@ -30,7 +39,11 @@ module.exports = class ChannelPinsUpdateEvent extends BaseEvent {
   }
   
   async run(client, channel) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   channelUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-channelUpdate
@@ -41,7 +54,11 @@ module.exports = class ChannelUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldChannel, newChannel) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   debug: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-debug
@@ -52,7 +69,11 @@ module.exports = class ChannelPinsUpdateEvent extends BaseEvent {
   }
   
   async run(client, info) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   emojiCreate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-emojiCreate
@@ -63,7 +84,11 @@ module.exports = class EmojiCreateEvent extends BaseEvent {
   }
   
   async run(client, emoji) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 `,
@@ -75,7 +100,11 @@ module.exports = class EmojiDeleteEvent extends BaseEvent {
   }
   
   async run(client, emoji) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   emojiUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-emojiUpdate
@@ -86,7 +115,11 @@ module.exports = class EmojiUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldEmoji, newEmoji) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   error: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-error
@@ -97,7 +130,11 @@ module.exports = class ErrorEvent extends BaseEvent {
   }
   
   async run(client, error) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 `,
@@ -109,7 +146,11 @@ module.exports = class GuildBanAddEvent extends BaseEvent {
   }
   
   async run(client, guild, user) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildBanRemove: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildBanRemove
@@ -120,7 +161,11 @@ module.exports = class GuildBanRemoveEvent extends BaseEvent {
   }
   
   async run(client, guild, user) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildCreate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildCreate
@@ -131,7 +176,11 @@ module.exports = class GuildCreateEvent extends BaseEvent {
   }
   
   async run(client, guild) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildDelete: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildDelete
@@ -142,7 +191,11 @@ module.exports = class GuildDeleteEvent extends BaseEvent {
   }
   
   async run(client, guild) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildIntegrationsUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildIntegrationsUpdate
@@ -153,7 +206,11 @@ module.exports = class GuildIntegrationsUpdateEvent extends BaseEvent {
   }
   
   async run(client, guild) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildMemberAdd: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildMemberAdd
@@ -164,7 +221,11 @@ module.exports = class GuildMemberAddEvent extends BaseEvent {
   }
   
   async run(client, member) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildMemberRemove: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildMemberRemove
@@ -175,7 +236,11 @@ module.exports = class GuildMemberRemoveEvent extends BaseEvent {
   }
   
   async run(client, member) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildMembersChunk: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildMembersChunk
@@ -186,7 +251,11 @@ module.exports = class GuildMembersChunkEvent extends BaseEvent {
   }
   
   async run(client, members, guild) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildMemberSpeaking: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildMemberSpeaking
@@ -197,7 +266,11 @@ module.exports = class GuildMemberSpeakingEvent extends BaseEvent {
   }
   
   async run(client, member, speaking) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildMemberUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildMemberUpdate
@@ -208,7 +281,11 @@ module.exports = class GuildMemberUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldMember, newMember) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildUnavailable: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildUnavailable
@@ -219,7 +296,11 @@ module.exports = class GuildUnavailableEvent extends BaseEvent {
   }
   
   async run(client, guild) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   guildUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-guildUpdate
@@ -230,7 +311,11 @@ module.exports = class GuildUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldGuild, newGuild) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   invalidated: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-invalidated
@@ -241,7 +326,11 @@ module.exports = class InvalidatedEvent extends BaseEvent {
   }
   
   async run(client) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   inviteCreate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-inviteCreate
@@ -252,7 +341,11 @@ module.exports = class EmojiDeleteEvent extends BaseEvent {
   }
   
   async run(client, invite) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   inviteDelete: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-inviteDelete
@@ -263,7 +356,11 @@ module.exports = class InviteDeleteEvent extends BaseEvent {
   }
   
   async run(client, invite) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   ready: `// const BaseEvent = require('../utils/structures/BaseEvent');
@@ -273,7 +370,11 @@ module.exports = class ReadyEvent extends BaseEvent {
   }
   
   async run(client) {
-    console.log(client.user.tag + ' has logged in.');
+    try {
+      console.log(client.user.tag + ' has logged in.');
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   message: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-message
@@ -284,7 +385,11 @@ module.exports = class MessageEvent extends BaseEvent {
   }
   
   async run(client, message) {
+    try {
     console.log(client.usert.tag + ' has logged in.');
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   messageDelete: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageDelete
@@ -295,7 +400,11 @@ module.exports = class MessageDeleteEvent extends BaseEvent {
   }
   
   async run(client, message) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   messageDeleteBulk: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageDeleteBulk
@@ -306,7 +415,11 @@ module.exports = class MessageDeleteBulkEvent extends BaseEvent {
   }
   
   async run(client, messages) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   messageReactionAdd: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionAdd
@@ -317,7 +430,11 @@ module.exports = class MessageReactionAddEvent extends BaseEvent {
   }
   
   async run(client, reaction, user) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   messageReactionRemove: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionRemove
@@ -328,7 +445,11 @@ module.exports = class MessageReactionRemoveEvent extends BaseEvent {
   }
   
   async run(client, reaction, user) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   messageReactionRemoveAll: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionRemoveAll
@@ -339,7 +460,11 @@ module.exports = class MessageReactionRemoveAllEvent extends BaseEvent {
   }
   
   async run(client, message) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   messageReactionRemoveEmoji: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageReactionRemoveEmoji
@@ -350,7 +475,11 @@ module.exports = class MessageReactionRemoveEmojiEvent extends BaseEvent {
   }
   
   async run(client, reaction) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   messageUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-messageUpdate
@@ -361,7 +490,11 @@ module.exports = class MessageUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldMessage, newMessage) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   presenceUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-presenceUpdate
@@ -372,7 +505,11 @@ module.exports = class PresenceUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldPresence, newPresence) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   rateLimit: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-rateLimit
@@ -383,7 +520,11 @@ module.exports = class RateLimitEvent extends BaseEvent {
   }
   
   async run(client, rateLimitInfo) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   roleCreate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-roleCreate
@@ -394,7 +535,11 @@ module.exports = class RoleCreateEvent extends BaseEvent {
   }
   
   async run(client, role) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   roleDelete: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-roleDelete
@@ -405,7 +550,11 @@ module.exports = class RoleDeleteEvent extends BaseEvent {
   }
   
   async run(client, role) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   roleUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-roleUpdate
@@ -416,7 +565,11 @@ module.exports = class RoleUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldRole, newRole) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   shardDisconnect: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-emojiUpdate
@@ -427,7 +580,11 @@ module.exports = class ShardDisconnectEvent extends BaseEvent {
   }
   
   async run(client, message) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   shardError: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-shardError
@@ -438,7 +595,11 @@ module.exports = class ShardErrorEvent extends BaseEvent {
   }
   
   async run(client, message) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   shardReady: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-emojiUpdate
@@ -449,7 +610,11 @@ module.exports = class EmojiDeleteEvent extends BaseEvent {
   }
   
   async run(client, id, unavailableGuilds) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   shardReconnecting: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-shardReconnecting
@@ -460,7 +625,11 @@ module.exports = class ShardReconnectingEvent extends BaseEvent {
   }
   
   async run(client, id) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   shardResume: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-shardResume
@@ -471,7 +640,11 @@ module.exports = class ShardResumeEvent extends BaseEvent {
   }
   
   async run(client, id, replayedEvents) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   typingStart: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-typingStart
@@ -482,7 +655,11 @@ module.exports = class TypingStartEvent extends BaseEvent {
   }
   
   async run(client, channel, user) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   userUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-userUpdate
@@ -493,7 +670,11 @@ module.exports = class UserUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldUser, newUser) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   voiceStateUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-voiceStateUpdate
@@ -504,7 +685,11 @@ module.exports = class WoiceStateUpdateEvent extends BaseEvent {
   }
   
   async run(client, oldState, newState) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   warn: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-warn
@@ -515,7 +700,11 @@ module.exports = class WarnEvent extends BaseEvent {
   }
   
   async run(client, info) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
   webhookUpdate: `// https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=e-webhookUpdate
@@ -526,7 +715,11 @@ module.exports = class WebhookUpdateEvent extends BaseEvent {
   }
   
   async run(client, channel) {
-    
+    try {
+
+    } catch (error) {
+      console.log(error);
+    }
   }
 }`,
 };
